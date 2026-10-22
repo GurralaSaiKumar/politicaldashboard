@@ -1,0 +1,113 @@
+/* Mantine UI Core Styles & Utility Rules */
+
+:root {
+  --mantine-font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --mantine-primary-color: #3b82f6;
+  --mantine-radius-default: 8px;
+}
+
+[data-mantine-color-scheme="dark"] {
+  --mantine-color-body: #0b132b;
+  --mantine-color-text: #f8fafc;
+  --mantine-color-paper: #1e293b;
+  --mantine-color-border: rgba(255, 255, 255, 0.1);
+  --mantine-color-dimmed: #94a3b8;
+}
+
+[data-mantine-color-scheme="light"] {
+  --mantine-color-body: #f8fafc;
+  --mantine-color-text: #0f172a;
+  --mantine-color-paper: #ffffff;
+  --mantine-color-border: rgba(0, 0, 0, 0.1);
+  --mantine-color-dimmed: #64748b;
+}
+
+.mantine-Container-root {
+  width: 100%;
+  max-width: 1380px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.mantine-Paper-root {
+  background-color: var(--mantine-color-paper);
+  border-radius: var(--mantine-radius-default);
+  transition: all 0.2s ease-in-out;
+}
+
+.mantine-Badge-root {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 1;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.mantine-Button-root {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.15s ease;
+  font-family: inherit;
+}
+
+.mantine-Tabs-list {
+  display: flex;
+  border-bottom: 1px solid var(--mantine-color-border);
+  gap: 0.5rem;
+}
+
+.mantine-Tabs-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  color: var(--mantine-color-dimmed);
+  font-weight: 600;
+  font-size: 13px;
+  transition: all 0.2s ease;
+}
+
+.mantine-Tabs-tab[data-active="true"] {
+  background-color: var(--mantine-primary-color);
+  color: #ffffff;
+}
+
+/* Modals */
+.mantine-Modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mantine-Modal-content {
+  background-color: var(--mantine-color-paper);
+  border: 1px solid var(--mantine-color-border);
+  border-radius: 12px;
+  max-width: 800px;
+  width: 90%;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 1.5rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+  z-index: 1001;
+}
