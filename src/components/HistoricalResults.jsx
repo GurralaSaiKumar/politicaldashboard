@@ -11,21 +11,14 @@ import {
   SegmentedControl,
   SimpleGrid,
   ThemeIcon,
-  rem,
   useMantineColorScheme
 } from '../ui/mantine';
 import {
   IconTrophy,
-  IconChartLine,
-  IconFlame,
-  IconUsers,
-  IconCheck,
-  IconArrowUpRight,
-  IconArrowDownRight
+  IconFlame
 } from '../ui/icons';
 import {
   ResponsiveContainer,
-  LineChart,
   Line,
   XAxis,
   YAxis,

@@ -4,13 +4,11 @@ import {
   createTheme,
   Container,
   Tabs,
-  Stack,
   Text,
   Badge,
   Group,
   Loader,
-  Alert,
-  rem
+  Alert
 } from './ui/mantine';
 import {
   IconUsers,

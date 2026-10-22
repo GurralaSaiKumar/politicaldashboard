@@ -7,7 +7,6 @@ import {
   Title,
   Text,
   Badge,
-  Table,
   Progress,
   SimpleGrid,
   useMantineColorScheme

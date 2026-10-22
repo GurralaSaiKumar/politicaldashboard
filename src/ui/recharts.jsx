@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 export function ResponsiveContainer({ width = '100%', height = 300, children }) {
   return (

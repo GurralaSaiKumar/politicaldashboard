@@ -10,21 +10,15 @@ import {
   Slider,
   Switch,
   Button,
-  SimpleGrid,
   ThemeIcon,
-  rem,
-  Card,
   Table,
   useMantineColorScheme
 } from '../ui/mantine';
 import {
-  IconAdjustments,
   IconSparkles,
   IconRefresh,
   IconFlame,
-  IconTrophy,
-  IconAlertTriangle,
-  IconArrowsExchange
+  IconTrophy
 } from '../ui/icons';
 import { api } from '../services/api';
 
@@ -36,10 +30,8 @@ export function SwingSimulator({ selectedPCId }) {
   const [turnoutDelta, setTurnoutDelta] = useState(0);
   const [neutralizeSplitTicket, setNeutralizeSplitTicket] = useState(false);
   const [simulationResult, setSimulationResult] = useState(null);
-  const [loading, setLoading] = useState(false);
 
   const runSimulation = async () => {
-    setLoading(true);
     try {
       const res = await api.simulateSwing({
         constituencyId: selectedPCId,
@@ -50,8 +42,6 @@ export function SwingSimulator({ selectedPCId }) {
       setSimulationResult(res.data);
     } catch (err) {
       console.error('Simulation error:', err);
-    } finally {
-      setLoading(false);
     }
   };
 

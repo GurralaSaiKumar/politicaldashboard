@@ -4,11 +4,7 @@ import {
   Stack,
   Title,
   Text,
-  Badge,
-  Table,
   Paper,
-  Divider,
-  Alert,
   Code,
   Group
 } from '../ui/mantine';

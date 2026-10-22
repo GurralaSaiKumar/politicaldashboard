@@ -10,18 +10,11 @@ import {
   RingProgress,
   SimpleGrid,
   ThemeIcon,
-  rem,
-  Card,
   useMantineColorScheme
 } from '../ui/mantine';
 import {
-  IconTrendingUp,
   IconTrendingDown,
-  IconChartScatter,
   IconShieldLock,
-  IconGauge,
-  IconCheck,
-  IconAlertTriangle,
   IconBuildingStore
 } from '../ui/icons';
 import {
@@ -32,13 +25,10 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip as RechartsTooltip,
-  Cell,
-  BarChart,
-  Bar,
-  Legend
+  Cell
 } from '../ui/recharts';
 
-export function ElectoralTrends({ trendsData, assemblyData }) {
+export function ElectoralTrends({ trendsData }) {
   const { colorScheme } = useMantineColorScheme();
   const isDark = colorScheme === 'dark';
 
@@ -46,22 +36,7 @@ export function ElectoralTrends({ trendsData, assemblyData }) {
     return <Text>Loading Electoral Trends Intelligence...</Text>;
   }
 
-  const { timelineData, correlationData, antiIncumbencyIndex } = trendsData;
-
-  // Assembly segment swing data (Comparing 2019 to 2024)
-  const segmentSwingData = (assemblyData || []).map(ac => {
-    const margin2024 = ac.parliamentaryLead2024 ? ac.parliamentaryLead2024.leadMargin : 0;
-    const margin2019 = ac.parliamentaryLead2019 ? ac.parliamentaryLead2019.leadMargin : margin2024;
-    const marginDelta = margin2024 - margin2019;
-
-    return {
-      name: ac.name,
-      acNumber: ac.acNumber,
-      marginDelta,
-      marginDeltaVotes: marginDelta,
-      swingDirection: marginDelta >= 0 ? 'Expansion' : 'Contraction'
-    };
-  });
+  const { correlationData, antiIncumbencyIndex } = trendsData;
 
   // Booth cluster data
   const boothClusters = [

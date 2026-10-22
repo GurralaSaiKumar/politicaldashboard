@@ -19,7 +19,6 @@ import {
   IconFileSpreadsheet,
   IconDatabase,
   IconFilter,
-  IconExternalLink,
   IconFileCertificate
 } from '../ui/icons';
 import { exportToCSV, exportToJSON } from '../utils/exportUtils';

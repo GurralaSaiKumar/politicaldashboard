@@ -9,20 +9,14 @@ import {
   Badge,
   Table,
   Button,
-  SimpleGrid,
   ThemeIcon,
-  rem,
   Alert,
   Card,
   useMantineColorScheme
 } from '../ui/mantine';
 import {
-  IconBuildingArch,
   IconArrowsExchange,
-  IconChartBar,
   IconInfoCircle,
-  IconShieldCheck,
-  IconAlertTriangle,
   IconMapPin
 } from '../ui/icons';
 import {
@@ -33,7 +27,6 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip as RechartsTooltip,
-  Legend,
   Cell
 } from '../ui/recharts';
 
